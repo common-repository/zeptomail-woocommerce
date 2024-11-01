@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "site_title": {
+      "type": "string"
+    },
+    "site_url": {
+      "type": "string"
+    },
+    "user_login": {
+      "type": "string"
+    },
+    "user_reset_url": {
+      "type": "string"
+    },
+    "user_login_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "site_title",
+    "site_url",
+    "user_login",
+    "user_reset_url",
+    "user_login_url"
+  ]
+}

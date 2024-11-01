@@ -1,0 +1,392 @@
+@font-face {
+  font-family: "zeptoi";
+  src: url(../images/iconFonts/zepto.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+[class*=zeptoi-],
+[class^=zeptoi-] {
+  display: inline-block;
+  font-family: "zeptoi";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+}
+.zepto-settings {
+	background-color: white;
+	padding: 50px 0px;
+}
+.zeptoi-angle-down:before {
+  content: "\e900";
+}
+.zeptoi-circle-check:before {
+  content: "\e901";
+}
+.zeptoi-circle-info:before {
+  content: "\e902";
+}
+.zeptoi-circle-info:after {
+  margin-left: -1em;
+  content: "\e903";
+}
+.zeptoi-close:before {
+  content: "\e904";
+}
+.zeptoi-logo:before {
+  content: "\e905";
+  color: rgb(34, 109, 180);
+}
+.zeptoi-logo::after {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(249, 178, 29);
+}
+
+body {
+  font-family: Lato, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
+
+.zepto-logo {
+  display: flex;
+  gap: 10px;
+  line-height: 1;
+  align-items: center;
+  margin: 20px 0px;
+}
+.zepto-logo i {
+  font-size: 2.625rem;
+}
+.zepto-logo h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.zepto-logo span {
+  font-size: 0.6875rem;
+}
+.zepto-main {
+  font-size: 0.875rem;
+  border-radius: 8px;
+  width: var(--zepto-widget-width, 415px);
+  border: 1px solid #d0d0d0;
+  margin: 0 auto;
+  background-color:white;
+}
+.zeptoaccordion__trigger {
+  color: #000;
+  padding: 24px 24px 12px;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  gap: 10px;
+}
+.zepto-accordion-disabled .zeptoaccordion__trigger {
+	color: #777777
+}
+.zeptoaccordion__trigger--collapsed {
+  border-top: 1px solid #e3e3e3;
+  padding-bottom: 24px;
+}
+.zeptoaccordion__trigger--collapsed:first-child {
+  border-top: none;
+}
+.zeptoaccordion__trigger--configured {
+  color: #000;
+}
+/*.zeptoaccordion__trigger--expanded .zeptoi-angle-down {
+  transform: rotate(180deg);
+}*/
+.zeptoaccordion__trigger--configured {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 24px;
+}
+.zeptoaccordion__trigger .zeptoi-angle-down {
+  font-size: 1.5rem;
+}
+.zeptoaccordion__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 102px;
+  gap: 24px;
+}
+.zeptoaccordion__title {
+  flex: 1;
+  text-align: left;
+}
+.zeptosetup-status {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.4;
+}
+.zeptosetup-status--completed {
+  color: #198019;
+  font-weight: 400;
+  gap: 8px;
+}
+.zeptosetup-status--completed i {
+  font-size: 1.25rem;
+}
+html[dir=ltr] .zeptosetup-status--completed {
+  margin-left: auto;
+}
+html[dir=rtl] .zeptosetup-status--completed {
+  margin-left: auto;
+}
+.zeptosetup-step-desc {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.zeptoform-element {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+}
+.zeptoform-element-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.zeptoform-element-block--column {
+  flex-direction: column;
+  gap: 12px;
+  align-items: normal;
+}
+.zeptoinput-label {
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: flex;
+  padding: 0;
+}
+.zeptoinput-helptext {
+  margin: 6px 0 0;
+  font-size: 0.6875rem;
+  font-style: italic;
+}
+.zeptoinput-helptext--error {
+  color: #c94242;
+}
+.zeptoinput-helptext--success {
+  color: #198019;
+}
+.zeptoinput-helptext--default {
+  color: #444444;
+}
+.zeptoinput-group {
+  display: flex;
+  gap: 24px;
+}
+.zeptotext {
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+}
+.zeptotext__box {
+  padding: 8px 12px;
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+}
+.zeptotext-field-wrapper {
+  display: flex;
+}
+.zeptotext__adorn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px;
+}
+.zeptotext__adorn .zeptoi-angle-down {
+  font-size: 1.25rem;
+}
+.zeptotext--unstyled {
+  border: none;
+}
+.zeptotext--error {
+  border-color: #c94242;
+}
+.zeptoselect {
+  cursor: pointer;
+}
+.zeptoselect__box {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 6px;
+}
+.zeptoselect__box:focus {
+  outline: 1px solid #264ded;
+}
+.zeptoselect__box:empty::before {
+  color: #777777;
+  content: attr(data-placeholder);
+  font-size: 13px;
+}
+.zeptobtn {
+  background-color: #264ded;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  transition: 0.3s background-color;
+  cursor: pointer;
+}
+.zeptobtn:hover {
+  cursor: pointer;
+  background-color: #0e39e4;
+}
+.zeptobtn--flat {
+  background-color: transparent;
+  color: #264ded;
+}
+.zeptobtn--flat:hover {
+  background-color: #eaf1ff;
+}
+.zeptobtn--default {
+  color: #9d9d9d;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.zeptobtn--default:hover {
+  background-color: #e3e3e3;
+}
+.zeptobtn--outlined {
+  border: 1px solid #264ded;
+}
+.zeptobtn--sm {
+  padding: 2px 3px;
+}
+.zeptobtn--md {
+  padding: 5px 8px;
+}
+.zeptobtn--italic {
+  font-style: italic;
+  font-size: 0.6875rem;
+}
+.zeptobtn:disabled {
+  border-color: #e3e3e3;
+  color: #e3e3e3;
+  cursor: default;
+  background-color: #fff;
+}
+.zeptobtn__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.zeptobtn-block {
+  display: flex;
+  gap: 16px;
+}
+.zeptocheckbox input:not(:disabled) {
+  cursor: pointer;
+}
+.zepto-form-label-info-icon {
+  --zmci-font-size: 0.75rem;
+  color: #777777;
+  padding: 2px;
+  border-radius: 3px;
+}
+html[dir=ltr] .zepto-form-label-info-icon {
+  margin-left: 5px;
+}
+html[dir=rtl] .zepto-form-label-info-icon {
+  margin-right: 5px;
+}
+.zepto-form-label-info-icon:hover, .zepto-form-label-info-icon:focus {
+  background-color: #e3e3e3;
+  cursor: pointer;
+  color: #000;
+  transition: 0.3s background-color ease-in-out;
+}
+.zeptoinput-control-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.zeptoinput-control-label input[type=radio] {
+  margin: 0;
+  transform: scale(1.2);
+}
+.zeptoaddress-btn-wra {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.zeptoaddress-btn-btm {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+}
+.zeptopopover {
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1490196078);
+  position: absolute;
+  width: 486px;
+  font-size: 0.875rem;
+  background-color: #fff;
+  
+}
+.zeptopopover__content {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.zeptopopover__header {
+  padding: 20px 20px 12px;
+  display: flex;
+}
+.zeptopopover__header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.zeptopopover__header__actions {
+  margin-left: auto;
+}
+
+.zepto-accordion-inactive .zeptoaccordion__content {
+	display: none;
+}
+.zepto-accordion-inactive .zeptoi-angle-down {
+  transform: rotate(180deg);
+}
+.zepto-accordion-active .zeptoaccordion__content {
+	display: flex;
+}
+.zepto-checkbox-inactive .zeptoform-element {
+	display: none;
+}
+.zepto-checkbox-active .zeptoform-element {
+	display: block;
+}
+.zepto-accordion-active .zeptoaccordion__trigger--expanded {
+  color: #000;
+}
+.zeptotext-field-wrapper select {
+  width:100%
+}
+.zepto-dispNone {
+	display:none;
+}
+.zepto-accordion-disabled .zeptoi-angle-down{
+	display:none;
+}
+.zepto-accordion-disabled .zeptoaccordion__trigger {
+	cursor:text;
+}
+.zepto-tab-space{
+	margin-left: 40px;
+}
